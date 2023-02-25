@@ -93,7 +93,7 @@ const nomes =  ['Maria','João','André','Júlia'];
 arrayNum = [1,2,3,4,5,10,20,30,40];
 arrayEmDobro = arrayNum.map(valor => valor*2);
 //console.log(arrayEmDobro);
-*/
+
 const pessoas =[
     {nome:'Wellington', idade:28, altura:1.86},
     {nome:'Mariane', idade:22, altura:1.70},
@@ -137,8 +137,61 @@ const total = arrayNum.filter(valor=>valor % 2===0).map(valor => valor*2).reduce
 //console.log(total);
 
 
+// Validador de cpf
+
+let cpf = '705.484.450-52';
+cpf = cpf.replace(/\D+/g, ''); // (/\D+/g) tira tudo que não é numero
+cpfArray = Array.from(cpf);
+
+somaCpf = cpfArray.reduce((ac, valor)=>{
+   
+},10)
 
 
+function ValidaCPF(cpfEnviado){
+    Object.defineProperty(this,'cpfLimpo', {
+        enumerable: true,
+        get: function(){
+            return cpfEnviado.replace(/\D+/g, '');
+        }
+    });
+}
+
+ValidaCPF.prototype.valida = function(){
+    if(typeof this.cpfLimpo === 'undefined') return false;
+    if(this.cpfLimpo.length !== 11) return false;
+    if(this.isSequence()) return false;
+    const cpfParcial = this.cpfLimpo.slice(0, -2);
+    const digito1 = this.criaDigito(cpfParcial);
+    const digito2 = this.criaDigito(cpfParcial + digito1);
+    
+    const novoCPF = cpfParcial + digito1 + digito2;
+    return novoCPF === this.cpfLimpo;
+
+
+};
+
+ValidaCPF.prototype.criaDigito = function(cpfParcial){
+    const cpfArray = Array.from(cpfParcial);
+    let contador = cpfArray.length + 1;
+    let total = cpfArray.reduce((ac, val)=> {
+        ac += contador * Number(val);
+        contador--;
+        return ac;
+    }, 0);
+    const digito = 11 -(total % 11);
+    return digito > 9 ? '0' : String(digito);
+};
+
+ValidaCPF.prototype.isSequence = function(){
+    const seq = this.cpfLimpo[0].repeat(this.cpfLimpo.length);
+    return seq===this.cpfLimpo;
+};
+
+const consultaCpf = new ValidaCPF('111.111.111-11');
+console.log(consultaCpf.valida());
+
+*/
 
 
 
