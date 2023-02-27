@@ -87,20 +87,3 @@ form button:hover {
   margin-bottom: 40px;
   letter-spacing: 4px;
 }
-
-.senha-gerada{
-  margin: 40px 40;
-  font-size: 2em;
-  color: #fff;
-  background-color: rgb(87, 87, 86);
-
-}
-
-input[type="checkbox"]{
-  width: 20px;
-  height: 20px;
-}
-
-.btn-gerar{
-  margin: 40px 40px;
-}
