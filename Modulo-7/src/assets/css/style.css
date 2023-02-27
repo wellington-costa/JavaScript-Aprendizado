@@ -24,6 +24,10 @@ body {
   background: #fff;
   padding: 20px;
   border-radius: 10px;
+  align-items: center;
+}
+.container h1{
+  text-align: center;
 }
 
 form input, form label, form button {
@@ -55,4 +59,31 @@ form button {
 
 form button:hover {
   background: var(--primary-color-darker);
+}
+
+.btn{
+  border: none;
+  background: var(--primary-color);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  height: 50px;
+  cursor: pointer;
+  
+  
+  
+  
+}
+
+.btn:hover{
+  background: var(--primary-color-darker);
+}
+
+.cpf-gerado{
+  font-size: 2em;
+  color: var(--primary-color);
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 40px;
+  letter-spacing: 4px;
 }
