@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Tela de Cadastro de Produto Responsiva</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./css/style-prod.css">
+</head>
+
+<body>
+  <div class="container">
+    <form class="product-form">
+      <h1>Cadastro de Produto</h1>
+      <label for="name">Nome:</label>
+      <input type="text" id="name" name="name">
+      <label for="cb">Código de barras:</label>
+      <input type="text" id="cb" name="cb">
+      <label for="qtd">Quantidade:</label>
+      <input type="number" id="qtd" name="qtd">
+      <label for="tipo">Tipo:</label>
+      <select id="tipo" name="tipo">
+        <option value="Alimentos">Alimentos</option>
+        <option value="Bebidas" selected>Bebidas</option>
+        <option value="Outros">Outros</option>
+      </select>
+
+      <label for="price">Preço:</label>
+      <input type="text" id="price" name="price">
+      <label for="description">Descrição:</label>
+      <textarea id="description" name="description"></textarea>
+      <button type="submit">Cadastrar</button>
+    </form>
+  </div>
+</body>
+
+</html>

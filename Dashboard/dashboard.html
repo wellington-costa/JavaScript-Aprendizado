@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Software para Hospital</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/21a9970d45.js" crossorigin="anonymous"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-5POKMSd3x8W0NttSvRcC4txHj0/0Z37Pmx4lw/kRbyU6ln9Hnmpdze/srKj6wYU6rtB3AvuzxbU6KhGvNV/Yng==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" integrity="sha384-92F/t2v3jDrnNR/KhXAtH31tjWNNTv8eWz+zGLJvdEGiMhzTXMeKyjfu8SMZzVbK" crossorigin="anonymous">
+
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <h1>Dashboard </h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Pacientes</a></li>
+            <li><a href="#">Profissionais de Saúde</a></li>
+            <li><a href="#">Agendamentos</a></li>
+            <li><a href="#">Sair</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="menu">
+            <ul class="menu-links">
+                <li><a href="#"><i class="fas fa-home"></i></i>Dashboard</a></li>
+                <li><a href="#"><i class="fas fa-hospital"></i>Perfil</a></li>
+                <li><a href="#"><i class="fas fa-users"></i>Pacientes</a></li>
+                <li><a href="#"><i class="fas fa-stethoscope"></i>Profissionais de Saúde</a></li>
+                <li><a href="#"><i class="fas fa-clock"></i>Agendamentos</a></li>
+                <li><a href="#"><i class="fas fa-cog"></i>Configurações</a></li>
+            </ul>
+        </div>
+        <div class="cards">
+            <div class="card">
+                <div class="icon"><i class="fas fa-users"></i></div>
+                <h2>Pacientes</h2>
+                <p>Total de pacientes: 150</p>
+            </div>
+            <div class="card">
+                <div class="icon"><i class="fas fa-stethoscope"></i></div>
+                <h2>Profissionais de Saúde</h2>
+                <p>Total de profissionais: 25</p>
+                <i class="ionicons ion-ios-arrow-forward"></i>
+            </div>
+            <div class="card">
+                <img src="https://source.unsplash.com/random/400x200" alt="Card image">
+                <div class="icon"><i class="fas fa-clock"></i></div>
+                <h2>Agendamentos</h2>
+                <p>Agendamentos para hoje: 10</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2023 Hospital ABC</p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
