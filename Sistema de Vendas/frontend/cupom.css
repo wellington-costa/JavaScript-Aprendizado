@@ -1,0 +1,39 @@
+.cupom {
+	font-size: 12pt;
+	line-height: 1.2;
+	margin: 0 auto;
+	padding: 0.5in;
+	width: 3.15in;
+}
+
+.cabecalho {
+	text-align: center;
+}
+
+.corpo {
+	margin-top: 10px;
+}
+
+table {
+	border-collapse: collapse;
+	margin-bottom: 10px;
+	width: 100%;
+}
+
+th {
+	text-align: left;
+}
+
+td, th {
+	border: 1px solid #ccc;
+	padding: 5px;
+}
+
+.total {
+	text-align: right;
+}
+
+.rodape {
+	text-align: center;
+	margin-top: 10px;
+}

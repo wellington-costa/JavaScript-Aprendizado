@@ -1,0 +1,17 @@
+<% if (erros){ %>
+
+        <div class="text-danger text-error">
+            <% erros.forEach(erro=>{ %>
+               <%= erro %><br>
+            <% }); %> 
+        </div><br>
+<% } %>
+
+<% if (success.length > 0){ %>
+
+    <div class="text-success text-bg-success">
+        <% success.forEach(erro=>{ %>
+           <%= success %><br>
+        <% }); %> 
+    </div><br>
+<% } %>
