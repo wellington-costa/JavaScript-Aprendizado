@@ -1,8 +1,9 @@
-const mongoose = require('mongoose');
+//const mongoose = require('mongoose');
 const validator = require('validator');
 const bcryptjs = require('bcryptjs');
 const { async } = require('regenerator-runtime');
 
+/*
 const UsuarioSchema = new mongoose.Schema({
      nome:{ type:String, required:true},
      username:{ type:String, required:true},
@@ -12,6 +13,7 @@ const UsuarioSchema = new mongoose.Schema({
 });
 
 const UsuarioModel = new mongoose.model('Usuario',UsuarioSchema);
+*/
 
 class Usuario {
     constructor(body) {
@@ -101,5 +103,16 @@ class Usuario {
         }
 
     }
+    async getForId(id){
+        if(typeof id !== 'string') return;
+        const user = await UsuarioModel.findById(id);
+        return user;
+    };
+    async update(id){
+        this.valida();
+        if(this.erros.length > 0) return;
+        this.usuario = await UsuarioModel.findByIdAndUpdate(id, this.body, {new: true});
+        return this.usuario;
+    };
 }
 module.exports = Usuario;

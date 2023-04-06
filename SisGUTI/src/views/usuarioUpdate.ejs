@@ -1,0 +1,56 @@
+<%- include('includes/head')%>
+	
+		<div class="main-panel">
+			<div class="content-wrapper">
+				<div class=" d-flex align-items-center auth">
+					<div class="content-wrapper">
+						<div class="card">
+							<div class="card-body">
+								<h4 class="card-title" align="center">Cadastro de Usuário</h4>
+								<p class="card-description" align="center"> Preencha todos os campos. </p>
+								<%- include('includes/error')%>
+								<form class="forms-sample" method="post" action="/cadastroUsuario/editar">
+									<div class="form-group">
+										<label for="exampleInputUsername1">Nome</label>
+										<input type="text" class="form-control" id="nome" name="nome"
+											placeholder="Nome Completo" required>
+									</div>
+									<div class="form-group">
+										<label for="exampleInputUsername1">Usuário</label>
+										<input type="text" class="form-control" id="username" name="username"
+											placeholder="Usuário" required>
+									</div>
+									<div class="form-group">
+										<label for="exampleInputEmail1">Email</label>
+										<input type="email" class="form-control" id="email" name="email"
+											placeholder="Email" required>
+									</div>
+									<div class="form-group">
+										<label for="exampleInputPassword1">Senha</label>
+										<input type="password" class="form-control" id="password1" name="password1"
+											placeholder="Password" required>
+									</div>
+									<div class="form-group">
+										<label for="exampleInputConfirmPassword1">Confirmar Senha</label>
+										<input type="password" class="form-control" id="confirmPassword1" name="confirmPassword1"
+											placeholder="Senha" required>
+									</div>
+									<div class="form-group">
+										<label for="exampleSelectGender">Tipo de acesso:</label>
+										<select class="form-control" id="selectTipo" name="selectTipo">
+											<option>Médico</option>
+											<option>Enfermeiro</option>
+											<option>Técnico em Enfermagem</option>
+										</select>
+									</div>
+
+									<button type="submit" class="btn btn-inverse-success mr-2">Salvar</button>
+									<button class="btn btn-inverse-danger ">Cancelar</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<%- include('includes/footer')%>

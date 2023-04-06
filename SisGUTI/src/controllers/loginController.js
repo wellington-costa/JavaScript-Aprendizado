@@ -3,7 +3,10 @@ const Usuario = require('../models/UsuarioModel');
 
 exports.index = (req, res)=>{
     
-    res.render('login');
+    if(!req.session.user) return res.render('login');
+
+    res.redirect('home');
+    
 };
 exports.login = async (req, res)=>{
     
@@ -21,7 +24,7 @@ exports.login = async (req, res)=>{
         
         req.session.save(function(){
              req.session.user = usuario.usuario;
-             return res.redirect('/');
+             return res.redirect('home');
             });
         }catch(e){
             console.log(e);
@@ -31,6 +34,6 @@ exports.login = async (req, res)=>{
     };
     exports.logout = (req, res)=>{
         req.session.destroy();
-        res.redirect('login');
+        res.redirect('/');
     };
 exports
