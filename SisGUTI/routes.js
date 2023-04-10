@@ -4,29 +4,38 @@ const home = require('./src/controllers/homeController');
 const contato = require('./src/controllers/contatoController');
 const login = require('./src/controllers/loginController');
 const cadUsuario = require('./src/controllers/cadastroUsuarioController');
-const {loginRequired} = require('./src/middlewares/middleware');
+const cadPaciente = require('./src/controllers/cadastroPacienteController');
+const cadProntuario = require('./src/controllers/cadastroProntuarioController');
+
 
 //
 
 // Rotas Home
-routes.get('/home', loginRequired, home.index);
-routes.post('/home', loginRequired, home.setPost);
+routes.get('/home', home.index);
+routes.post('/home', home.setPost);
 
 
 //Rotas de Login
-routes.get('/login', login.index);
-routes.post('/login', login.login);
+routes.get('/', login.index);
+routes.post('/', login.login);
 routes.get('/logout', login.logout);
 
 //Rotas de cadastro
-routes.get('/cadastroUsuario',loginRequired, cadUsuario.index);
-routes.post('/cadastroUsuario', loginRequired,cadUsuario.registra);
-routes.post('/cadastroUsuario/editar/:id',loginRequired, cadUsuario.editar);
-routes.get('/cadastroUsuario/editar/:id',loginRequired, cadUsuario.editView);
+routes.get('/cadastroUsuario', cadUsuario.index);
+routes.post('/cadastroUsuario',cadUsuario.registra);
+routes.post('/cadastroUsuario/editar/:id', cadUsuario.editar);
+routes.get('/cadastroUsuario/editar/:id', cadUsuario.editView);
 
 // Rotas Contato
-routes.get('/', contato.index);
-routes.post('/', contato.setPost);
+routes.get('/contato', contato.index);
+routes.post('/contato', contato.setPost);
+
+//Rotas Paciente
+routes.get('/paciente', cadPaciente.index);
+
+//Prontuario
+routes.get('/prontuario', cadProntuario.index);
+
 
 
 

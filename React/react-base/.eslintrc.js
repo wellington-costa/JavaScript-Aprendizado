@@ -7,7 +7,8 @@ module.exports = {
     'plugin:react/recommended',
     'airbnb',
     'prettier',
-    'prettier/react'
+    'prettier/react',
+    "plugin:prettier/recommended"
   ],
   globals: {
     Atomics: 'readonly',
@@ -28,6 +29,7 @@ module.exports = {
   ],
   rules: {
     'prettier/prettier': 'error',
+    'prettier/prettier': ['error', {}, { usePrettierrc: true }],
     'react/jsx-filename-extension': 0,
     'import/prefer-default-export': 0,
     'react-hooks/rules-of-hooks': 'error',

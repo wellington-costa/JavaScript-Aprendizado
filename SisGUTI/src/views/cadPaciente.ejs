@@ -1,0 +1,60 @@
+<%- include('includes/head')%>
+	<%- include('includes/nav')%>
+		<div class="main-panel">
+			<div class="content-wrapper">
+				<div class=" d-flex align-items-center auth">
+					<div class="content-wrapper">
+						<div class="card">
+							<div class="card-body">
+								<h4 class="card-title" align="center">Cadastro de Paciente</h4>
+								<p class="card-description" align="center"> Preencha todos os campos. </p>
+								
+								<form class="forms-sample" method="post" action="/cadastroUsuario">
+									<div class="form-group">
+										<label for="exampleInputUsername1">Nome Completo</label>
+										<input type="text" class="form-control" id="nome" name="nome"
+											placeholder="Nome Completo" required>
+									</div>
+									<div class="form-group">
+										<label for="exampleInputdatanasc">Data Nasc.</label>
+										<input type="date" class="form-control" id="datanasc" name="datanasc"
+											 required>
+									</div>
+									<div class="form-group">
+										<label for="exampleInputidade">Idade</label>
+										<input type="idade" class="form-control" id="idade" name="idade"
+											placeholder="idade" required>
+									</div>
+									
+									<div class="form-group">
+										<label for="exampleInputConfirmraca">Raça</label>
+										<select class="form-control" id="selectRaca" name="selectRaca">
+											<option>Branca</option>
+											<option>Parda</option>
+											<option>Preta</option>
+											<option>Amarela</option>
+										</select>
+									</div>
+									<div class="form-group">
+										<label for="exampleSelectGender">Sexo:</label>
+										<select class="form-control" id="selectSexo" name="selectSexo">
+											<option>Masculino</option>
+											<option>Feminino</option>
+										</select>
+									</div>
+                  <div class="form-group">
+										<label for="exampleInputmunOrigem">Municipio de Origem:</label>
+										<input type="text" class="form-control" id="munOrigem" name="munOrigem"
+											placeholder="Eunápolis" required>
+									</div>
+
+									<button type="submit" class="btn btn-inverse-success mr-2">Cadastrar</button>
+									<button class="btn btn-inverse-danger ">Cancelar</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<%- include('includes/footer')%>

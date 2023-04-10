@@ -3,9 +3,9 @@ const Usuario = require('../models/UsuarioModel');
 
 exports.index = (req, res)=>{
     
-    if(!req.session.user) return res.render('login');
+    //if(!req.session.user) return res.render('login');
 
-    res.redirect('home');
+    res.render('login');
     
 };
 exports.login = async (req, res)=>{

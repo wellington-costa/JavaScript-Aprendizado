@@ -1,0 +1,55 @@
+<%- include('includes/head')%>
+	<%- include('includes/nav')%>
+		<div class="main-panel">
+			<div class="content-wrapper">
+				<div class=" d-flex align-items-center auth">
+					<div class="content-wrapper">
+						<div class="card">
+							<div class="card-body">
+								<h4 class="card-title" align="center">Prontuário</h4>
+								<p class="card-description" align="center"> Preencha todos os campos. </p>
+								
+								<form class="forms-sample" method="post" action="/">
+									<div class="form-group">
+										<label name="pacienteId"></label>							
+									</div>
+                  <div class="form-group">
+										<label for="exampleInputmunOrigem">Prontuário Nº</label>
+										<input type="number" class="form-control" id="nprontuario" name="nprontuario"
+											placeholder="000000" required>
+									</div>
+									<div class="form-group">
+										<label for="exampleInputdataInternacao">Data de Internação:</label>
+										<input type="date" class="form-control" id="dataInternacao" name="dataInternacao"
+											 required>
+									</div>
+									<div class="form-group">
+										<label for="exampleInputhora">Hora</label>
+										<input type="time" class="form-control" id="hora" name="hora"
+											placeholder="hora" required>
+									</div>
+									
+                  <div class="form-group">
+										<label for="exampleInputConfirmraca">Setor de Entrada</label>
+										<select class="form-control" id="setor" name="setor">
+											<option>Bloco Cirúrgico</option>
+											<option>Centro Cirúrgico</option>
+											<option>Ala Amarela</option>
+											<option>Ala Vermelha</option>
+										</select>
+									</div>
+                  <div class="form-group">
+										<label for="exampleInputdiagnostico">Diagnóstico</label>
+                    <textarea class="form-control" id="txtArea" rows="10" cols="30" required></textarea>
+									</div>
+
+									<button type="submit" class="btn btn-inverse-success mr-2">Cadastrar</button>
+									<button class="btn btn-inverse-danger ">Cancelar</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<%- include('includes/footer')%>
